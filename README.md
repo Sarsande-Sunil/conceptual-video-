@@ -186,3 +186,63 @@ Redux architecture
   for sending the data to redux store we use --- useDispatch function  dispatch(user) in useEffect 
   for getting data back we use useSelector and property of data like const {user} = useSlector((state)=>(state.user))
 
+  6 Stateful vs Stateless Components? 
+  They are also known as:
+
+– Container vs Presentational components
+
+– Smart vs Dumb components
+  The literal difference is that one has state, and the other doesn’t. That means the stateful components are keeping track of changing data, while stateless components print out what is given to them via props, or they always render the same thing.
+
+7 : explain the difference when working directly with DOM
+  What are the benefits of using DOM?
+Image result for explain the difference when working directly with DOM
+Advantages. By manipulating the DOM, you have infinite possibilities. You can create applications that update the data of the page without needing a refresh. Also, you can create applications that are customizable by the user and then change the layout of the page without a refresh.
+  
+  8 what is reconciliation and react fibre?
+  Reconciliation is the algorithm React uses to diff one tree with another to determine which parts need to be changed.
+
+Update is a change in the data used to render a React app. Usually the result of `setState`. Eventually results in a re-render.
+  React Fiber is an ongoing reimplementation of React’s core algorithm. It is the culmination of over two years of research by the React team.
+
+The goal of React Fiber is to increase its suitability for areas like animation, layout, and gestures. Its headline feature is incremental rendering: the ability to split rendering work into chunks and spread it out over multiple frames.
+  
+  9 what is react state management?
+ State of a component is an object that holds some information that may change over the lifetime of the component. We should always try to make our state as simple as possible and minimise the number of stateful components.
+const [state, setState] = React.useState( )
+  
+10 what is the difference between redux and context api?
+  The simplest way to pass data from a parent to a child in a React Application is by passing it on to the child's props. But an issue arises when a deeply nested child requires data from a component higher up in the tree. If we pass on the data through the props, every single one of the children would be required to accept the data and pass it on to its child, leading to prop drilling, a terrible practice in the world of React.
+
+To solve the prop drilling issue, we have State Management Solutions like Context API and Redux. But which one of them is best suited for your application? Today we are going to answer this age-old question!
+  
+  What is the Context API?
+Let's check the official documentation:
+
+In a typical React application, data is passed top-down (parent to child) via props, but such usage can be cumbersome for certain types of props (e.g. locale preference, UI theme) that are required by many components within an application. Context provides a way to share values like these between components without having to explicitly pass a prop through every level of the tree.
+  So What is Redux?
+Of course, let's head over to the documentation:
+
+Redux is a predictable state container for JavaScript apps.
+
+It helps you write applications that behave consistently, run in different environments (client, server, and native), and are easy to test. On top of that, it provides a great developer experience, such as live code editing combined with a time-traveling debugger.
+
+You can use Redux together with React, or with any other view library. It is tiny (2kB, including dependencies), but has a large ecosystem of addons available.
+  
+  MongoDB vs MySql,
+  MySQL is a relational database management system (RDBMS) from the 
+Oracle Corporation. Like other relational systems, MySQL stores data 
+in tables and uses structured query language (SQL) for database 
+access. When MySQL developers need to access data in an application, 
+they merge data from multiple tables together in a process called a 
+join. In MySQL, you predefine your database schema and set up rules 
+to govern the relationships between fields in your tables.
+  
+  MongoDB is a NoSQL database that stores data as JSON-like documents. 
+Documents store related information together and use the MongoDB 
+query language (MQL) for access. Fields can vary from document to 
+document - there is no need to declare the structure of documents to 
+the system, as documents are self-describing. Optionally, schema 
+validation can be used to enforce data governance controls over each 
+collection.
+  
